@@ -1,0 +1,12 @@
+version: '3'
+services:
+  dokuwiki:
+    image: docker.io/devopstek/dokuwiki:20250202
+    ports:
+      - '80:8080'
+      - '443:8443'
+    volumes:
+      - 'dokuwiki_data:/devopstek/dokuwiki'
+volumes:
+  dokuwiki_data:
+    driver: local
